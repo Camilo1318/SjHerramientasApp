@@ -9,21 +9,21 @@ export const SideBar = () => {
       <div className="list-group list-group-flush">
         <Link
           className="list-group-item list-group-item-action bg-primary text-light"
-          to="/inventario"
+          to="/faltantes"
         >
-          Inventario
+          Faltantes
         </Link>
         <Link
           className="list-group-item list-group-item-action bg-primary text-light"
-          to="/clientes"
+          to="/guias"
         >
-          Clientes
+          Guias
         </Link>
         <Link
           className="list-group-item list-group-item-action bg-primary text-light"
-          to="/ventas"
+          to="/reportes"
         >
-          Nueva Venta
+          Reportes
         </Link>
       </div>
     </div>

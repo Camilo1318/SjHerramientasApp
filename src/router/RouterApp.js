@@ -17,34 +17,12 @@ import { SideBar } from "../components/UI/SideBar";
 import "../components/UI/NavBarStyles.css";
 
 export const RouterApp = () => {
-  const [products, setProducts] = useState([]);
-  const [clientes, setClientes] = useState([]);
-  const [ventas, setVentas] = useState([]);
-
-  useEffect(() => {
-    const queryRef = db
-      .collection("DataBase")
-      .doc("Duitama")
-      .collection("Productos");
-    queryRef.onSnapshot((snapshot) => {
-      setProducts(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    });
-  }, [setProducts]);
-
-  useEffect(() => {
-    const queryRef = db
-      .collection("DataBase")
-      .doc("Duitama")
-      .collection("Clientes");
-    queryRef.onSnapshot((snapshot) => {
-      setClientes(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    });
-  }, [setClientes]);
+  const [faltantes, setFaltantes] = useState([]);
 
   const [toggledBtn, setToggledBtn] = useState(false);
   return (
     <>
-      <ProductsContext.Provider value={{ products, clientes, ventas }}>
+      <ProductsContext.Provider value={{ faltantes }}>
         <Router>
           <div className={`${toggledBtn ? "toggled" : ""} d-flex`} id="wrapper">
             {/* <!-- Sidebar--> */}
@@ -55,10 +33,10 @@ export const RouterApp = () => {
 
               <div class="container-fluid">
                 <Switch>
-                  <Route exact path="/ventas" component={SalesScreen} />
-                  <Route exact path="/inventario" component={ProductsScreen} />
-                  <Route exact path="/clientes" component={ClientesScreen} />
-                  <Redirect to="/inventario" />
+                  <Route exact path="/reportes" component={ReportesScreen} />
+                  <Route exact path="/faltantes" component={FaltantesScreen} />
+                  <Route exact path="/guias" component={GuiasScreen} />
+                  <Redirect to="/reportes" />
                 </Switch>
               </div>
             </div>
