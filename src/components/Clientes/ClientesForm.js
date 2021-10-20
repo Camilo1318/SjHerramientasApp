@@ -103,7 +103,7 @@ export const ClientesForm = ({
         </div>
 
         {error && (
-          <span class="badge badge-pill badge-secondary mb-3">{error}</span>
+          <span className="badge badge-pill badge-secondary mb-3">{error}</span>
         )}
         <button type="submit" className="btn btn-outline-dark btn-block">
           {currentId === "" ? "Save" : "Update"}

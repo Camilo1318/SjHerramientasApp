@@ -5,19 +5,23 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import { ClientesScreen } from "../components/Clientes/ClientesScreen";
-import { NavBar } from "../components/UI/NavBar";
+
+// Components import
 import { ProductsContext } from "../components/Products/ProductsContext";
-import { ProductsScreen } from "../components/Products/ProductsScreen";
-import { SalesScreen } from "../components/Sales/SalesScreen";
+import { FaltantesScreen } from "../components/Faltantes/FaltantesScreen";
+import { ReportesScreen } from "../components/Reportes/ReportesScreen";
+import { GuiasScreen } from "../components/Guias/GuiasScreen";
 
-import { db } from "../Firebase"; //import Firestore of Firebase
+
+// UI imports
+import { NavBar } from "../components/UI/NavBar";
 import { SideBar } from "../components/UI/SideBar";
-
 import "../components/UI/NavBarStyles.css";
 
 export const RouterApp = () => {
   const [faltantes, setFaltantes] = useState([]);
+
+  
 
   const [toggledBtn, setToggledBtn] = useState(false);
   return (
@@ -31,7 +35,7 @@ export const RouterApp = () => {
             <div id="page-content-wrapper">
               <NavBar {...{ toggledBtn, setToggledBtn }} />
 
-              <div class="container-fluid">
+              <div className="container-fluid">
                 <Switch>
                   <Route exact path="/reportes" component={ReportesScreen} />
                   <Route exact path="/faltantes" component={FaltantesScreen} />

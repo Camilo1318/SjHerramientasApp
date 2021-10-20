@@ -1,6 +1,4 @@
 import React from "react";
-import { BsFillPersonCheckFill } from "react-icons/bs";
-import { FaHome, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export const SideBar = () => {

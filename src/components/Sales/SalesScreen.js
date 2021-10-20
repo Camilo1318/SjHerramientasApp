@@ -11,7 +11,7 @@ export const SalesScreen = () => {
     <>
       {/* Cabecera de la Factura */}
       <div className="mx-5">
-        <span class="badge rounded-pill bg-secondary d-block my-2"></span>
+        <span className="badge rounded-pill bg-secondary d-block my-2"></span>
         <div className="d-flex justify-content-between border align-items-center my-2">
           <div className="col-2">
             <h1 className="ml-2 text-success">
@@ -23,14 +23,14 @@ export const SalesScreen = () => {
             <p className="">Factura # : 001</p>
           </div>
         </div>
-        <span class="badge rounded-pill bg-secondary d-block my-2"></span>
+        <span className="badge rounded-pill bg-secondary d-block my-2"></span>
         {/* Datos del Cliente */}
-        <div class="card">
+        <div className="card">
           <div className="card-header d-flex justify-content-between ">
             <div>Factura</div>
             <div>Mayo 10 2021 Duitama</div>
           </div>
-          <div class="card-body p-0">
+          <div className="card-body p-0">
             <form>
               <div className="row justify-content-center align-items-center ">
                 <label htmlFor="cliente" className="pt-2">
@@ -96,7 +96,7 @@ export const SalesScreen = () => {
         {/* Tabla de los Productos */}
 
         <div className="card-body">
-          <table class="table table-striped">
+          <table className="table table-striped">
             <thead>
               <tr className="text-center">
                 <th scope="col">Cantidad</th>
@@ -138,7 +138,7 @@ export const SalesScreen = () => {
           </table>
         </div>
         {/* Precios y Añadir Productos */}
-        <span class="badge rounded-pill bg-secondary d-block my-2"></span>
+        <span className="badge rounded-pill bg-secondary d-block my-2"></span>
         <div className="d-flex justify-content-between">
           <div className="">
             <button className="btn btn-outline-primary inline-block">
