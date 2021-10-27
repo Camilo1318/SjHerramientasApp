@@ -12,7 +12,6 @@ import { FaltantesScreen } from "../components/Faltantes/FaltantesScreen";
 import { ReportesScreen } from "../components/Reportes/ReportesScreen";
 import { GuiasScreen } from "../components/Guias/GuiasScreen";
 
-
 // UI imports
 import { NavBar } from "../components/UI/NavBar";
 import { SideBar } from "../components/UI/SideBar";
