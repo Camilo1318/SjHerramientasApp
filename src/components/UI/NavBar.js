@@ -11,7 +11,7 @@ export const NavBar = ({ toggledBtn, setToggledBtn }) => {
 
           onClick={() => setToggledBtn(!toggledBtn)}
         >
-          Sj-Tools
+          Menu
         </button>
         {/*  <button
           className="navbar-toggler"
@@ -27,9 +27,7 @@ export const NavBar = ({ toggledBtn, setToggledBtn }) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" to="/Login">
-                Singout
-              </Link>
+              Sj Herramientas 
             </li>
           </ul>
         </div>
